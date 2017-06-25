@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>收运日报表</title>
+<link rel="stylesheet" href="echarts.css" />
+<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+<script type="text/javascript">
+	var collectType=1;//区域详情type参数，默认为1垃圾量
+	/*本地地址*/
+	var BASE_URL='../api/';
+	var SUFFIX='.json';
+
+/*格式化地址*/
+function formatUrl(url){
+	return BASE_URL+url+SUFFIX;
+}
+//滚动设置
+function wresize(callback){
+	window.addEventListener('resize', callback);
+	callback();
+}
+</script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="echarts.js"></script>
+</body>
+</html>
